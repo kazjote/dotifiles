@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+ORIG_MSG_FILE="$1"
+TEMP=`mktemp /tmp/git-XXXXX`
+
+CURRENT_BRANCH=`git branch | grep '^\*' | cut -b3-`
+STORY_ID=`echo $CURRENT_BRANCH | awk -F_ '{print $NF}'`
+
+if [ "$STORY_ID" != "$CURRENT_BRANCH" ]
+then
+  (echo "[$STORY_ID]"; cat "$ORIG_MSG_FILE") > "$TEMP"
+  cat "$TEMP" > "$ORIG_MSG_FILE"
+fi
