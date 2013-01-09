@@ -23,6 +23,7 @@ Bundle 'benmills/vimux'
 Bundle 'svenfuchs/vim-deliminator'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/VimClojure'
 
 Bundle 'mileszs/ack.vim'
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
