@@ -1,0 +1,14 @@
+# ~/.tmuxinator/testa.yml
+# you can make as many tabs as you wish...
+
+project_name: Testa
+project_root: ~/projects/testa
+rvm: ruby-1.9.3-p194@testa_on_unit
+tabs:
+  - editor:
+      layout: 2fee,185x54,0,0[185x37,0,0,185x16,0,38]
+      panes:
+        - vim
+        - #empty
+  - shell: git pull
+  - tunnels: bundle exec support_scripts/aws_tunnels.sh qa kbielecki /home/kazjote/.ssh/qa_id_rsa

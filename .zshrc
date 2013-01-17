@@ -41,8 +41,9 @@ unsetopt correct_all
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+rvm use default
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-rvm 1.9.3
 
 # function to go to a parent directory of the current directory.
 # It takes the number of directory to ascend as argument.
@@ -59,3 +60,7 @@ up(){
   fi
   cd $d
 }
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+export EDITOR=vim
