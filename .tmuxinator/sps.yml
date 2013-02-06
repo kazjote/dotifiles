@@ -1,0 +1,14 @@
+# ~/.tmuxinator/testa.yml
+# you can make as many tabs as you wish...
+
+project_name: SPS
+project_root: ~/projects/sps
+rvm: ruby-1.9.3-p194@sp_sps_r20
+tabs:
+  - editor:
+      layout: 2fee,185x54,0,0[185x37,0,0,185x16,0,38]
+      panes:
+        - vim
+        - #empty
+  - shell: git pull
+  - server: bundle exec rails server -p 3010

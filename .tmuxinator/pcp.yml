@@ -1,0 +1,14 @@
+# ~/.tmuxinator/testa.yml
+# you can make as many tabs as you wish...
+
+project_name: PCP
+project_root: ~/projects/pcp
+rvm: ruby-1.8.7-p330@sp_cms
+tabs:
+  - editor:
+      layout: 2fee,185x54,0,0[185x37,0,0,185x16,0,38]
+      panes:
+        - vim
+        - #empty
+  - shell: git pull
+  - server: bundle exec rails server -p 3018

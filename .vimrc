@@ -12,8 +12,8 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-haml'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
@@ -24,9 +24,13 @@ Bundle 'svenfuchs/vim-deliminator'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/VimClojure'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'mileszs/ack.vim'
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+let g:ctrlp_user_command          = ['.git/', 'cd %s && git ls-files -co --exclude-standard']
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -125,3 +129,7 @@ autocmd BufWritePost *
       \ if exists('b:git_dir') && executable(b:git_dir.'/hooks/ctags') |
       \ call system('"'.b:git_dir.'/hooks/ctags" &') |
       \ endif
+
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+
