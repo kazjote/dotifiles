@@ -79,7 +79,10 @@ nmap gp "+p
 
 nmap <leader>r :VimuxRunLastCommand<CR>
 
-colorscheme elflord
+set background=dark
+set t_Co=16
+let g:solarized_termcolors=16
+colorscheme solarized
 
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
