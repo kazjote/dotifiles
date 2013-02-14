@@ -65,4 +65,4 @@ up(){
 
 export EDITOR=vim
 export TERM=xterm-16color
-
+export COLLATION=utf8_general_ci
