@@ -23,7 +23,10 @@ Bundle 'benmills/vimux'
 Bundle 'svenfuchs/vim-deliminator'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/VimClojure'
+
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-foreplay'
 
 Bundle 'mileszs/ack.vim'
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -48,6 +51,8 @@ Bundle "corntrace/bufexplorer"
 Bundle 'L9'
 Bundle 'dbext.vim'
 Bundle 'foldsearch'
+
+Bundle 'pangloss/vim-javascript'
 
 syntax on
 filetype plugin indent on
