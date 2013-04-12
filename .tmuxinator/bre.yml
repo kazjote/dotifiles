@@ -1,0 +1,14 @@
+# ~/.tmuxinator/testa.yml
+# you can make as many tabs as you wish...
+
+project_name: BRE
+project_root: ~/projects/bre
+rvm: ruby-2.0.0-p0@sp_bre
+tabs:
+  - editor:
+      layout: 2fee,185x54,0,0[185x37,0,0,185x16,0,38]
+      panes:
+        - vim
+        - #empty
+  - shell: git pull
+  - server: bundle exec rails server -p 3010

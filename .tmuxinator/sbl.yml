@@ -1,0 +1,14 @@
+# ~/.tmuxinator/testa.yml
+# you can make as many tabs as you wish...
+
+project_name: SBL
+project_root: ~/projects/sbl
+rvm: rvm use --create ruby-1.9.3-p327@sp_sbl
+tabs:
+  - editor:
+      layout: 2fee,185x54,0,0[185x37,0,0,185x16,0,38]
+      panes:
+        - vim
+        - bundle exec rspec
+  - shell: git pull
+

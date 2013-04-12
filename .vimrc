@@ -26,11 +26,13 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/Align'
 
 Bundle 'mileszs/ack.vim'
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-let g:ctrlp_user_command          = ['.git/', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_extensions   = ['tag']
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
