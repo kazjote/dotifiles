@@ -87,7 +87,10 @@ nmap gp "+p
 nmap <leader>r :VimuxRunLastCommand<CR>
 
 set background=dark
-set t_Co=16
+" normal  high or low
+let g:solarized_contrast="high"
+let g:solarized_termtrans=1
+" 0  1
 let g:solarized_termcolors=16
 colorscheme solarized
 
