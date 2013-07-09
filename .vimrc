@@ -86,7 +86,7 @@ nmap gp "+p
 
 nmap <leader>r :VimuxRunLastCommand<CR>
 
-set background=dark
+set background=light
 " normal  high or low
 let g:solarized_contrast="high"
 let g:solarized_termtrans=1
@@ -143,6 +143,4 @@ autocmd BufWritePost *
       \ call system('"'.b:git_dir.'/hooks/ctags" &') |
       \ endif
 
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-
+set colorcolumn=120
