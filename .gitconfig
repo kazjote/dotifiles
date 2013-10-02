@@ -1,2 +1,27 @@
 [user]
 	email = kazjote@gmail.com
+[color]
+	ui = true
+  branch = auto
+  diff = auto
+  status = auto
+[alias]
+	ci = commit
+	co = checkout
+	dif = diff
+	mer = merge
+	pu = pull
+  st = status
+  vim = !vim -O `git st --porcelain | grep -v '^D' | awk '{ print $2 }'`
+  a = add
+  out = log origin..HEAD
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[core]
+	excludesfile = /home/kazjote/.gitignore
+  editor = /usr/bin/vim
+[merge]
+  tool = vimdiff
+[init]
+  templatedir = ~/.git_template
+[push]
+	default = simple
