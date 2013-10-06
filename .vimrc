@@ -18,7 +18,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'sjl/gundo.vim'
-Bundle 'xolox/vim-notes'
 Bundle 'benmills/vimux'
 Bundle 'svenfuchs/vim-deliminator'
 Bundle 'kien/ctrlp.vim'
@@ -30,6 +29,8 @@ Bundle 'vim-scripts/Align'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-foreplay'
+
+Bundle 'tpope/vim-markdown'
 
 Bundle 'mileszs/ack.vim'
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -76,9 +77,16 @@ set nocp incsearch
 
 set lcs=tab:\ \ ,trail:~,extends:>,precedes:<
 
+let mapleader = ","
+
 nmap cn :cn<CR>
 nmap cp :cp<CR>
 nmap tt :NERDTreeToggle<CR>
+nmap <leader>t :!tmux send-keys -t .1 M-p C-m<CR>
+
+nmap tn :tabnext<CR>
+nmap tp :tabprevious<CR>
+nmap tc :tabnew<CR>
 
 vmap gy "+y
 nmap gy "+y
@@ -143,6 +151,4 @@ autocmd BufWritePost *
       \ call system('"'.b:git_dir.'/hooks/ctags" &') |
       \ endif
 
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-
+set colorcolumn=120
