@@ -1,2 +1,6 @@
 [user]
 	email = kazjote@gmail.com
+[color]
+	ui = true
+[push]
+	default = simple
